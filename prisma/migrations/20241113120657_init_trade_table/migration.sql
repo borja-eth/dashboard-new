@@ -1,0 +1,19 @@
+-- CreateTable
+CREATE TABLE "Trade" (
+    "id" TEXT NOT NULL,
+    "market" TEXT NOT NULL,
+    "type" TEXT NOT NULL,
+    "entryPrice" DOUBLE PRECISION NOT NULL,
+    "amount" DOUBLE PRECISION NOT NULL,
+    "leverage" DOUBLE PRECISION NOT NULL DEFAULT 1,
+    "entryDate" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "closePrice" DOUBLE PRECISION,
+    "closeDate" TIMESTAMP(3),
+    "status" TEXT NOT NULL,
+    "pnlUSD" DOUBLE PRECISION,
+    "pnlBTC" DOUBLE PRECISION,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Trade_pkey" PRIMARY KEY ("id")
+);
